@@ -7,8 +7,8 @@ import companyLogo from "../assets/logo.svg";
 import leftArrow from "../assets/left_arrow.svg";
 import rightArrow from "../assets/right_arrow.svg";
 
-import ellipse from "../assets/ellipse.svg";
-import rectangle from "../assets/rectangle.svg";
+import ellipse from "../assets/Ellipse.svg";
+import rectangle from "../assets/Rectangle.svg";
 import viewAll from "../assets/view_all.svg";
 
 const caseStudies = [

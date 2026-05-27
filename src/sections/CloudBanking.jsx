@@ -2,7 +2,7 @@
 
 import "./CloudBanking.css";
 import analyticsMac from "../assets/analytics_mac_2.svg";
-import learnMoreIcon from "../assets/Learn_More.svg";
+import learnMoreIcon from "../assets/Learn_more.svg";
 import cb7 from "../assets/CB7.svg";
 
 export default function CloudBanking() {

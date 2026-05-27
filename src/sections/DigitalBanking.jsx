@@ -2,7 +2,7 @@
 
 import "./DigitalBanking.css";
 
-import learnMoreIcon from "../assets/Learn_More.svg";
+import learnMoreIcon from "../assets/Learn_more.svg";
 
 import n7Background from "../assets/n7-1.svg";
 import crossBackground from "../assets/cross.svg";

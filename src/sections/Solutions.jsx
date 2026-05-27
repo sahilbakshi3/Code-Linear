@@ -4,7 +4,7 @@ import digitalbanking from "../assets/digital_banking.svg";
 import openbanking from "../assets/open_banking.svg";
 import crosslogo from "../assets/cross_logo_thing.svg";
 import loanbanking from "../assets/loan_org.svg";
-import learnMoreIcon from "../assets/Learn_More.svg";
+import learnMoreIcon from "../assets/Learn_more.svg";
 
 const solutions = [
   {

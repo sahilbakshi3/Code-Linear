@@ -1,0 +1,398 @@
+/* CaseStudies.css */
+
+.cs {
+  width: 1440px;
+  height: 872px;
+
+  background: #000d12;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.cs .container {
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.cs__heading {
+  width: 463.2644348144531px;
+  height: 64px;
+
+  margin: 0 auto;
+
+  padding-top: 43.17px;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-align: center;
+
+  color: #e9f4f9;
+}
+
+/* =========================
+   SLIDER WRAPPER
+========================= */
+
+.cs__slider-wrapper {
+  width: 1193.867431640625px;
+  height: 513.30078125px;
+
+  margin: 115px auto 0;
+}
+
+/* =========================
+   FEATURED CARD
+========================= */
+
+.cs__featured {
+  width: 1193.867431640625px;
+  height: 438px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs__featured::before {
+  content: "";
+
+  width: 1015px;
+  height: 438px;
+
+  background: #01141b;
+
+  border-radius: 18px;
+
+  position: absolute;
+
+  z-index: 0;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.cs__featured-img {
+  width: 421.5086975097656px;
+  height: 381.5010986328125px;
+
+  background: #07193c;
+
+  border-radius: 11.43px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+
+  margin-right: 77px;
+}
+
+.cs__logo-grid {
+  width: 310px;
+  height: 310px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 36px;
+}
+
+.cs__logo {
+  width: 130px;
+  height: 130px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.cs__featured-content {
+  width: 480px;
+  height: 327.0113525390625px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  z-index: 2;
+}
+
+.cs__content-top {
+  width: 480px;
+  height: 245.0113525390625px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.cs__category {
+  width: 108px;
+  height: 16px;
+
+  opacity: 0.8;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  text-transform: uppercase;
+
+  color: #2490bb;
+}
+
+.cs__title {
+  width: 422.5573425292969px;
+  height: 156px;
+
+  margin: 0;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 43px;
+  line-height: 120%;
+
+  color: #e9f4f9;
+}
+
+.cs__company-logo {
+  width: 125.51422882080078px;
+  height: 30.011356353759766px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   READ MORE BUTTON
+========================= */
+
+.cs__readmore {
+  width: 431px;
+  height: 36px;
+
+  border: 1px solid rgba(233, 244, 249, 0.5);
+  border-radius: 10px;
+
+  padding: 10px 183px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.cs__readmore span {
+  width: 65px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  text-transform: uppercase;
+
+  color: rgba(233, 244, 249, 0.5);
+}
+
+.cs__readmore:hover {
+  background: #e9f4f9;
+}
+
+.cs__readmore:hover span {
+  color: #01141b;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.cs__nav {
+  width: 1193.867431640625px;
+
+  margin-top: 33px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+/* CENTER NAVIGATION */
+
+.cs__navigation {
+  width: 243.1945343017578px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 31px;
+}
+
+/* ARROW BUTTONS */
+
+.cs__arrow-btn {
+  width: 42px;
+  height: 42px;
+
+  border: 1.36px solid #00b4fd;
+  border-radius: 50%;
+
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.cs__arrow-btn:hover {
+  background: rgba(0, 180, 253, 0.08);
+}
+
+.cs__arrow-icon {
+  width: 18px;
+  height: 18px;
+
+  object-fit: contain;
+}
+
+/* PROGRESS */
+
+.cs__progress {
+  width: 97.19453430175781px;
+  height: 12px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7.73px;
+}
+
+.cs__progress-ellipse {
+  width: 11.999882698059082px;
+  height: 12px;
+
+  object-fit: contain;
+}
+
+.cs__progress-rect {
+  width: 38.00998306274414px;
+  height: 11.9066162109375px;
+
+  object-fit: contain;
+}
+
+/* VIEW ALL */
+
+.cs__viewall {
+  position: absolute;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs__viewall-img {
+  width: 86.56884765625px;
+  height: 21px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1440px) {
+  .cs {
+    width: 100%;
+    height: auto;
+
+    padding-bottom: 80px;
+  }
+
+  .cs__slider-wrapper,
+  .cs__featured,
+  .cs__nav {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cs__featured {
+    flex-direction: column;
+
+    gap: 40px;
+  }
+
+  .cs__featured::before {
+    display: none;
+  }
+
+  .cs__featured-img,
+  .cs__featured-content {
+    width: 100%;
+  }
+
+  .cs__title {
+    width: 100%;
+
+    font-size: 36px;
+  }
+
+  .cs__readmore {
+    width: 100%;
+
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs__navigation {
+    gap: 18px;
+  }
+
+  .cs__nav {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .cs__viewall {
+    position: static;
+  }
+}

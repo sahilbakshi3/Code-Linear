@@ -1,0 +1,85 @@
+/* Marquee.css */
+
+.marquee-section {
+  width: 100%;
+  height: 116px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.marquee {
+  width: 100%;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-item {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marquee-image {
+  width: auto;
+  height: 44px;
+
+  object-fit: contain;
+
+  display: block;
+
+  margin-right: 70px;
+}
+
+/* INFINITE LOOP */
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* HOVER PAUSE */
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .marquee-section {
+    height: 90px;
+  }
+
+  .marquee-image {
+    height: 34px;
+    margin-right: 40px;
+  }
+
+  .marquee-track {
+    animation-duration: 14s;
+  }
+}

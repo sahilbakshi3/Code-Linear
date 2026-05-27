@@ -1,0 +1,209 @@
+/* CoreBankingFeatures.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&display=swap");
+
+.features-section {
+  width: 100%;
+  height: 681px;
+
+  background: #000d12;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.features-container {
+  width: 1440px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  position: relative;
+}
+
+/* LEFT IMAGE */
+
+.features-image-wrapper {
+  position: absolute;
+
+  top: 110px;
+  left: -159px;
+}
+
+.features-image {
+  width: 651.6661px;
+  height: 461.4216px;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* RIGHT CONTENT */
+
+.features-content {
+  position: absolute;
+
+  width: 590px;
+  height: 350.4077px;
+
+  top: 168.68px;
+  left: 770px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 34px;
+}
+
+/* TITLE */
+
+.features-title-wrapper {
+  width: 495.3026px;
+  height: 70px;
+}
+
+.features-title {
+  margin: 0;
+
+  color: #e9f4f9;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 27px;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+/* CONTENT AREA */
+
+.features-list-wrapper {
+  width: 590px;
+  height: 246.4077px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* SUBTITLE */
+
+.features-subtitle {
+  margin: 0;
+
+  color: #e9f4f9;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+/* GRID */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  column-gap: 34px;
+}
+
+/* COLUMN */
+
+.features-column {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+/* FEATURE ITEM */
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+}
+
+.feature-tick {
+  width: 29.98px;
+  height: 31.41px;
+
+  object-fit: contain;
+
+  flex-shrink: 0;
+
+  margin-top: -2px;
+}
+
+.feature-item p {
+  margin: 0;
+
+  color: rgba(233, 244, 249, 0.8);
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1440px) {
+  .features-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .features-section {
+    height: auto;
+
+    padding: 80px 24px;
+  }
+
+  .features-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 60px;
+  }
+
+  .features-image-wrapper,
+  .features-content {
+    position: relative;
+
+    top: unset;
+    left: unset;
+  }
+
+  .features-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .features-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .features-title-wrapper,
+  .features-title,
+  .features-list-wrapper {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .features-title {
+    font-size: 22px;
+  }
+}

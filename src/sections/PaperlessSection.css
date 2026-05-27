@@ -1,0 +1,289 @@
+/* PaperlessSection.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Chivo+Mono:wght@400&display=swap");
+
+.paperless-section {
+  width: 100%;
+  height: 681px;
+
+  background: #000d12;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* MAIN CARD */
+
+.paperless-card {
+  position: absolute;
+
+  width: 1279px;
+  height: 427px;
+
+  top: 127px;
+  left: 81px;
+
+  border-radius: 27px;
+
+  background: linear-gradient(99.21deg, #031e2a -12.22%, #000d12 59.26%);
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+/* BACKGROUND SVG */
+
+.paperless-bg {
+  position: absolute;
+
+  width: 1141px;
+  height: 687px;
+
+  top: -160.72px;
+  left: 223.56px;
+
+  opacity: 0.5;
+
+  object-fit: contain;
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 0;
+}
+
+/* LEFT CONTENT */
+
+.paperless-content {
+  position: absolute;
+
+  width: 607.8349px;
+  height: 202px;
+
+  top: 112.28px;
+  left: 65px;
+
+  z-index: 2;
+}
+
+.paperless-text-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+/* TITLE */
+
+.paperless-title {
+  width: 607.8349px;
+  height: 128px;
+
+  margin: 0;
+
+  color: #e9f4f9;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+/* DESCRIPTION */
+
+.paperless-description {
+  width: 462.9191px;
+  height: 42px;
+
+  margin: 0;
+
+  opacity: 0.8;
+  color: #e9f4f9;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+/* BUTTON GROUP */
+
+.paperless-actions {
+  position: absolute;
+
+  width: 458px;
+  height: 49px;
+
+  top: 189px;
+  left: 757px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+
+  z-index: 2;
+}
+
+/* COMMON BUTTON */
+
+.paperless-actions button {
+  height: 49px;
+
+  border-radius: 10px;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.paperless-actions button:hover {
+  transform: translateY(-2px);
+}
+
+/* CONTACT BUTTON */
+
+.paperless-btn-outline {
+  width: 208px;
+  height: 49px;
+
+  padding: 15px 59px;
+
+  border: 1px solid #e9f4f9;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #e9f4f9;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+/* REQUEST DEMO */
+
+.paperless-btn-primary {
+  width: 210px;
+
+  padding: 15px 51px;
+
+  border: none;
+
+  background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
+
+  color: #ffffff;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1440px) {
+  .paperless-card {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 1320px) {
+  .paperless-section {
+    height: auto;
+
+    padding: 80px 24px;
+  }
+
+  .paperless-card {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+
+    left: unset;
+    top: unset;
+
+    transform: unset;
+
+    padding: 60px 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 60px;
+  }
+
+  .paperless-content,
+  .paperless-actions {
+    position: relative;
+
+    top: unset;
+    left: unset;
+  }
+
+  .paperless-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .paperless-title {
+    width: 100%;
+    height: auto;
+
+    font-size: 42px;
+  }
+
+  .paperless-description {
+    width: 100%;
+    height: auto;
+  }
+
+  .paperless-actions {
+    width: 100%;
+
+    flex-wrap: wrap;
+  }
+
+  .paperless-bg {
+    left: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .paperless-title {
+    font-size: 34px;
+  }
+
+  .paperless-actions {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 20px;
+  }
+
+  .paperless-btn-outline,
+  .paperless-btn-primary {
+    width: 100%;
+    max-width: 260px;
+  }
+}

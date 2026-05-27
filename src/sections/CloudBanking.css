@@ -1,0 +1,270 @@
+/* CloudBanking.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Chivo+Mono:wght@400&display=swap");
+
+.analytics-section {
+  width: 100%;
+  height: 619px;
+  background: #000d12;
+
+  position: relative;
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+/* BACKGROUND SVG */
+
+.analytics-bg-text {
+  position: absolute;
+
+  width: 1141px;
+  height: 687px;
+
+  top: -2.25px;
+  left: -163.31px;
+
+  opacity: 0.5;
+
+  object-fit: contain;
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 0;
+}
+
+/* MAIN CONTAINER */
+
+.analytics-container {
+  width: 1440px;
+  height: 100%;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  padding-left: 80px;
+
+  z-index: 2;
+}
+
+/* LEFT SIDE */
+
+.analytics-content {
+  width: 607.8349px;
+  height: 308px;
+
+  display: flex;
+  align-items: center;
+
+  position: relative;
+  z-index: 2;
+}
+
+.analytics-text-wrapper {
+  width: 607.8349px;
+  height: 271px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* TEXT BLOCK */
+
+.analytics-text-block {
+  width: 607.8349px;
+  height: 186px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
+  margin-bottom: 36px;
+}
+
+.analytics-title {
+  width: 607.8349px;
+
+  margin: 0;
+
+  color: #e9f4f9;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+}
+
+.analytics-description {
+  width: 327.1877px;
+  height: 42px;
+
+  margin: 0;
+
+  opacity: 0.8;
+  color: #e9f4f9;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0;
+}
+
+/* BUTTON */
+
+.analytics-btn {
+  width: 210px;
+  height: 49px;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 15px 51px;
+
+  background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
+
+  color: #ffffff;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  margin-bottom: 20px;
+}
+
+.analytics-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* LEARN MORE */
+
+.learn-more {
+  width: 102.5688px;
+  height: 21px;
+
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.learn-more img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* RIGHT IMAGE */
+
+.analytics-image-wrapper {
+  position: absolute;
+
+  top: 80.17px;
+  right: -40px;
+
+  z-index: 2;
+}
+
+.analytics-image {
+  width: 651.6661px;
+  height: 461.4216px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1440px) {
+  .analytics-container {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .analytics-image-wrapper {
+    right: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .analytics-section {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .analytics-container {
+    width: 100%;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 60px;
+
+    padding: 0 24px;
+  }
+
+  .analytics-content,
+  .analytics-text-wrapper,
+  .analytics-text-block {
+    width: 100%;
+    height: auto;
+  }
+
+  .analytics-title {
+    width: 100%;
+    font-size: 42px;
+  }
+
+  .analytics-description {
+    width: 100%;
+    height: auto;
+  }
+
+  .analytics-image-wrapper {
+    position: relative;
+
+    top: auto;
+    right: auto;
+
+    width: 100%;
+  }
+
+  .analytics-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-title {
+    font-size: 34px;
+  }
+
+  .analytics-btn {
+    width: 100%;
+    max-width: 210px;
+  }
+}

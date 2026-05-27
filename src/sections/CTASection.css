@@ -1,0 +1,202 @@
+/* CTASection.css */
+
+.cta {
+  width: 1440px;
+  height: 316px;
+
+  background: #000d12;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 57px 80px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.cta__content {
+  width: 607.8348999023438px;
+  height: 202px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+.cta__title {
+  width: 607.8348999023438px;
+  height: 128px;
+
+  margin: 0;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 53px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+
+  color: #e9f4f9;
+}
+
+.cta__description {
+  width: 462.9190979003906px;
+  height: 42px;
+
+  margin: 0;
+
+  opacity: 0.7;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+  color: #e9f4f9;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.cta__actions {
+  width: 458px;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 40px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.cta__btn {
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+
+  border-radius: 10px;
+
+  transition: 0.3s ease;
+
+  box-sizing: border-box;
+}
+
+/* OUTLINE BUTTON */
+
+.cta__btn--outline {
+  width: 208px;
+
+  border: 1px solid #e9f4f9;
+
+  padding: 15px 59px;
+
+  background: transparent;
+}
+
+.cta__btn--outline:hover {
+  background: #e9f4f9;
+}
+
+.cta__btn--outline:hover span {
+  color: #000d12;
+}
+
+/* PRIMARY BUTTON */
+
+.cta__btn--primary {
+  width: 210px;
+
+  padding: 15px 51px;
+
+  background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
+}
+
+.cta__btn--primary:hover {
+  transform: translateY(-2px);
+}
+
+/* BUTTON TEXT */
+
+.cta__btn span {
+  width: 90px;
+  height: 19px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
+
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+
+  color: #e9f4f9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1440px) {
+  .cta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cta {
+    height: auto;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 60px;
+  }
+
+  .cta__content,
+  .cta__title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta {
+    padding: 48px 24px;
+  }
+
+  .cta__title {
+    font-size: 40px;
+  }
+
+  .cta__actions {
+    width: 100%;
+
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cta__btn {
+    width: 100%;
+  }
+
+  .cta__description {
+    width: 100%;
+  }
+}

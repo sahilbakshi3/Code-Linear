@@ -1,0 +1,286 @@
+/* Footer.css */
+
+.footer {
+  width: 1440px;
+  height: 787px;
+
+  background: #000d12;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================
+   GRADIENT GLOW
+========================= */
+
+.footer::after {
+  content: "";
+
+  position: absolute;
+
+  width: 1440px;
+  height: 556.7720947265625px;
+
+  top: 547.54px;
+  left: 0;
+
+  opacity: 0.05;
+
+  background: linear-gradient(103.43deg, #00b4fd -1.02%, #003ace 83.53%);
+
+  filter: blur(200px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.footer__main {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  padding: 130px 53px 0 53px;
+
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.footer__left {
+  width: 440px;
+}
+
+.footer__n7 {
+  width: 440px;
+  height: 232px;
+
+  object-fit: contain;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.footer__right {
+  width: 816.3174438476562px;
+
+  display: grid;
+
+  grid-template-columns:
+    233.43px
+    233.43px
+    233.43px;
+
+  column-gap: 58px;
+}
+
+/* =========================
+   COLUMN
+========================= */
+
+.footer__column {
+  width: 233.43px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 72px;
+}
+
+/* =========================
+   TEXT AREA
+========================= */
+
+.footer__text-area {
+  width: 233.43px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.footer__title {
+  width: 56px;
+  height: 21px;
+
+  margin: 0;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+  color: #e9f4f9;
+}
+
+.footer__content {
+  width: 233.43px;
+
+  margin: 0;
+
+  opacity: 0.7;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+  color: #e9f4f9;
+}
+
+/* =========================
+   TABLE AREA
+========================= */
+
+.footer__table {
+  width: 164.01904296875px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+/* =========================
+   ROW
+========================= */
+
+.footer__row {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.footer__row span {
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+  color: rgba(233, 244, 249, 0.7);
+}
+
+.footer__arrow {
+  width: 16px;
+  height: 16px;
+
+  object-fit: contain;
+}
+
+.footer__row:hover {
+  transform: translateX(4px);
+}
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer__bottom {
+  width: 779.4307250976562px;
+
+  position: absolute;
+
+  top: 718.96px;
+  left: 543.68px;
+
+  z-index: 2;
+}
+
+.footer__bottom p {
+  width: 779.4307250976562px;
+
+  margin: 0;
+
+  opacity: 0.3;
+
+  font-family: "Archivo", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0%;
+
+  color: #e9f4f9;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1440px) {
+  .footer {
+    width: 100%;
+    height: auto;
+
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer__main {
+    flex-direction: column;
+
+    gap: 80px;
+  }
+
+  .footer__right {
+    width: 100%;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 60px;
+  }
+
+  .footer__bottom {
+    position: static;
+
+    width: 100%;
+
+    margin-top: 80px;
+
+    padding: 0 24px;
+
+    box-sizing: border-box;
+  }
+
+  .footer__bottom p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__main {
+    padding: 80px 24px 0;
+  }
+
+  .footer__right {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__n7 {
+    width: 280px;
+    height: auto;
+  }
+}

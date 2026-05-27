@@ -1,0 +1,397 @@
+/* ===== HERO SECTION ===== */
+
+.hero {
+  position: relative;
+
+  width: 1440px;
+  max-width: 100%;
+
+  height: 811px;
+
+  margin: 0 auto;
+
+  background: #000d12;
+
+  overflow: hidden;
+}
+
+/* ===== MAIN LAYOUT ===== */
+
+.hero__inner {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  padding-top: 140px;
+  padding-bottom: 80px;
+}
+
+/* ===== LEFT CONTENT ===== */
+
+.hero__content {
+  width: 608px;
+
+  flex-shrink: 0;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== HERO TITLE ===== */
+
+.hero__title {
+  width: 607px;
+  max-width: 100%;
+
+  font-family: "Archivo", sans-serif;
+
+  font-size: 67px;
+  font-weight: 500;
+  line-height: 120%;
+
+  letter-spacing: -0.01em;
+
+  color: #e9f4f9;
+
+  margin-bottom: 1.25rem;
+}
+
+/* ===== HERO SUBTITLE ===== */
+
+.hero__subtitle {
+  max-width: 520px;
+
+  font-family: "Archivo", sans-serif;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+
+  letter-spacing: 0;
+
+  color: #a8b3c7;
+
+  margin-bottom: 2.5rem;
+}
+
+/* ===== BUTTONS WRAPPER ===== */
+
+.hero__actions {
+  width: 438px;
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+}
+
+/* ===== SHARED BUTTON STYLES ===== */
+
+.hero__actions .btn {
+  height: 49px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  font-family: "Chivo Mono", monospace;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+
+  transition: all 0.25s ease;
+
+  flex-shrink: 0;
+}
+
+/* ===== REQUEST DEMO BUTTON ===== */
+
+.hero__actions .btn-primary {
+  width: 210px;
+
+  padding: 15px 51px;
+
+  background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
+
+  border: none;
+
+  color: #e9f4f9;
+}
+
+.hero__actions .btn-primary:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 10px 30px rgba(0, 122, 255, 0.35);
+}
+
+/* ===== CONTACT US BUTTON ===== */
+
+.hero__actions .btn-outline {
+  width: 208px;
+
+  padding: 15px 59px;
+
+  border: 1px solid #e9f4f9;
+
+  background: transparent;
+
+  color: #e9f4f9;
+}
+
+.hero__actions .btn-outline:hover {
+  background: rgba(233, 244, 249, 0.08);
+}
+
+/* ===== RIGHT VISUAL ===== */
+
+.hero__visual {
+  position: relative;
+
+  width: 562px;
+  height: 301px;
+
+  flex-shrink: 0;
+
+  margin-right: 40px;
+}
+
+/* ===== BLUE GLOW ===== */
+
+.hero__image-glow {
+  position: absolute;
+
+  width: 398.87px;
+  height: 398.87px;
+
+  top: -50px;
+  left: 120px;
+
+  opacity: 0.5;
+
+  background: linear-gradient(103.43deg, #00b4fd -1.02%, #003ace 83.53%);
+
+  filter: blur(100px);
+
+  border-radius: 50%;
+
+  z-index: 0;
+}
+
+/* ===== LADY IMAGE ===== */
+
+.hero__lady-wrap {
+  position: absolute;
+
+  width: 362.64px;
+  height: 300.71px;
+
+  top: 0.25px;
+  left: 87.13px;
+
+  border-radius: 31px;
+
+  overflow: hidden;
+
+  z-index: 2;
+}
+
+.hero__lady-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* ===== FLOATING CARDS ===== */
+
+.hero__floating-card {
+  position: absolute;
+
+  border-radius: 12px;
+
+  overflow: hidden;
+
+  z-index: 3;
+}
+
+/* ===== TOP RIGHT CARD ===== */
+
+.hero__floating-card--top {
+  width: 208px;
+  height: 177px;
+
+  top: 23px;
+  left: 353px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow: 0px 0px 27.57px 8.92px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== INNER BALANCE CARD ===== */
+
+.hero__floating-card-inner {
+  position: absolute;
+
+  width: 199px;
+  height: 168px;
+
+  top: 4.5px;
+  left: 5px;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  overflow: hidden;
+}
+
+/* ===== BOTTOM LEFT CARD ===== */
+
+.hero__floating-card--bottom {
+  width: 254px;
+  height: 117px;
+
+  top: 150px;
+  left: -28px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.4);
+
+  backdrop-filter: blur(16.19px);
+  -webkit-backdrop-filter: blur(16.19px);
+
+  box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== SVG IMAGES ===== */
+
+.hero__floating-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* ===== TRUSTED BY ===== */
+
+.hero__trusted {
+  position: absolute;
+
+  width: 621.36px;
+  height: 55.4px;
+
+  left: 80px;
+  top: 655px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  z-index: 5;
+}
+
+.hero__trusted-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1024px) {
+  .hero__inner {
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 4rem;
+  }
+
+  .hero {
+    height: auto;
+
+    padding-bottom: 120px;
+  }
+
+  .hero__visual {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+  }
+
+  .hero__inner {
+    padding-top: 120px;
+  }
+
+  .hero__content {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .hero__title {
+    width: 100%;
+
+    font-size: 48px;
+  }
+
+  .hero__actions {
+    width: 100%;
+
+    flex-direction: column;
+
+    height: auto;
+  }
+
+  .hero__actions .btn-primary,
+  .hero__actions .btn-outline {
+    width: 100%;
+  }
+
+  .hero__visual {
+    transform: scale(0.8);
+  }
+
+  .hero__trusted {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .hero__trusted-logos {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+}

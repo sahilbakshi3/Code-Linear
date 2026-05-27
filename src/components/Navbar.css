@@ -1,0 +1,288 @@
+.navbar {
+  position: fixed;
+
+  top: 31px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  z-index: 1000;
+}
+
+/* Main Navbar Container */
+.navbar__inner {
+  width: 716px;
+  height: 47px;
+
+  margin: 0 auto;
+
+  padding: 9px 10px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 12px;
+
+  background: rgba(32, 38, 45, 0.72);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  transition: all 0.3s ease;
+}
+
+.navbar--scrolled .navbar__inner {
+  background: rgba(20, 24, 30, 0.92);
+}
+
+/* Logo */
+.navbar__logo {
+  font-family: "Archivo", sans-serif;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  letter-spacing: -0.03em;
+
+  margin-right: 48px;
+
+  flex-shrink: 0;
+}
+
+/* Nav Links Wrapper */
+.navbar__links {
+  display: flex;
+  align-items: center;
+
+  gap: 32px;
+
+  margin-left: auto;
+  margin-right: 32px;
+}
+
+/* Individual Nav Link */
+.navbar__link {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  font-family: "Chivo Mono", monospace;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+
+  padding: 0;
+}
+
+.navbar__link svg {
+  width: 10px;
+  height: 6px;
+
+  flex-shrink: 0;
+}
+
+.navbar__link:hover {
+  color: #ffffff;
+}
+
+/* Dropdown */
+.navbar__dropdown {
+  position: relative;
+}
+
+.navbar__dropdown-menu {
+  position: absolute;
+
+  top: calc(100% + 14px);
+  left: 0;
+
+  min-width: 220px;
+
+  padding: 10px;
+
+  border-radius: 14px;
+
+  background: #111827;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+
+  animation: fadeDown 0.18s ease;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar__dropdown-item {
+  display: block;
+
+  padding: 10px 12px;
+
+  border-radius: 10px;
+
+  font-family: "Archivo", sans-serif;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: rgba(255, 255, 255, 0.72);
+
+  transition: all 0.2s ease;
+}
+
+.navbar__dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+}
+
+/* CTA Button */
+.navbar__cta {
+  width: 161px;
+  height: 26px;
+
+  border: 1px solid #e9f4f9;
+  border-radius: 6px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Chivo Mono", monospace;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 130%;
+
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+
+  color: #e9f4f9;
+
+  background: transparent;
+
+  transition: all 0.25s ease;
+
+  flex-shrink: 0;
+}
+
+.navbar__cta:hover {
+  background: rgba(233, 244, 249, 0.08);
+  border-color: #ffffff;
+}
+
+/* Hamburger */
+.navbar__hamburger {
+  display: none;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  margin-left: auto;
+}
+
+.navbar__hamburger span {
+  width: 22px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu */
+.navbar__mobile {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    top: 16px;
+
+    padding: 0 16px;
+  }
+
+  .navbar__inner {
+    width: 100%;
+    height: 56px;
+
+    padding: 0 16px;
+  }
+
+  .navbar__links,
+  .navbar__cta {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__mobile {
+    margin-top: 12px;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    background: rgba(20, 24, 30, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .navbar__mobile-link {
+    font-family: "Chivo Mono", monospace;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, 0.82);
+  }
+}

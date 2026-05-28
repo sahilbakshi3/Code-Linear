@@ -62,31 +62,28 @@
 }
 
 /* ======================================
-   TWO-COLUMN LAYOUT
-   Left: header + text blocks
-   Right: phone images stacked
+   TOP-LEVEL TWO-COLUMN LAYOUT
+   Left  (~38%): header + CTA
+   Right (~62%): stacked card rows
 ====================================== */
 
 .digital-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 80px;
+  grid-template-columns: 38% 62%;
+  gap: 0 60px;
   align-items: start;
 }
 
-/* LEFT COLUMN */
+/* ── LEFT COLUMN ── */
 .digital-left {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  position: sticky;
+  top: 100px; /* stays visible while right column scrolls */
 }
 
-/* HEADER — sits at top of left col */
 .digital-header {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding-bottom: 80px;
+  gap: 24px;
 }
 
 .digital-header-content {
@@ -100,7 +97,7 @@
   color: #000d12;
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: clamp(30px, 3.8vw, 53px);
+  font-size: clamp(28px, 3.2vw, 48px);
   line-height: 120%;
   letter-spacing: -0.01em;
 }
@@ -113,7 +110,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 140%;
-  max-width: 380px;
+  max-width: 340px;
 }
 
 .digital-btn {
@@ -152,25 +149,59 @@
   object-fit: contain;
 }
 
-/* TEXT BLOCKS — left col, aligned with phones */
-.digital-text-blocks {
+/* ── RIGHT COLUMN ── */
+.digital-right {
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
-.digital-text-block {
+/* ======================================
+   CARD ROW — each row = phone | text
+   Two equal halves within the right col
+====================================== */
+
+.digital-card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+  align-items: center;
+  padding: 56px 0;
+}
+
+.digital-card-row:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 13, 18, 0.1);
+}
+
+/* Even rows: swap phone to right, text to left */
+.digital-card-row:nth-child(even) .digital-card-phone {
+  order: 2;
+}
+
+.digital-card-row:nth-child(even) .digital-card-text {
+  order: 1;
+}
+
+/* Phone half */
+.digital-card-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.digital-phone-img {
+  width: min(220px, 85%);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 20px 40px rgba(0, 13, 18, 0.14));
+}
+
+/* Text half */
+.digital-card-text {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  /* Each block height matches corresponding phone on right */
-  min-height: 440px;
-  justify-content: center;
-  padding-right: 20px;
-}
-
-.digital-text-block:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 13, 18, 0.08);
 }
 
 .digital-card-title {
@@ -178,7 +209,7 @@
   color: #000d12;
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-size: clamp(14px, 1.4vw, 17px);
   line-height: 140%;
 }
 
@@ -188,15 +219,15 @@
   color: #000d12;
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 155%;
+  font-size: 14px;
+  line-height: 160%;
 }
 
 /* POINTS */
 .digital-card-points {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
 .digital-card-point {
@@ -218,38 +249,8 @@
   color: #000d12;
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 140%;
-}
-
-/* RIGHT COLUMN — phone images */
-.digital-right {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  align-items: center;
-}
-
-.digital-phone-block {
-  width: 100%;
-  min-height: 440px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 0;
-}
-
-.digital-phone-block:not(:last-child) {
-  border-bottom: 1px solid rgba(0, 13, 18, 0.08);
-}
-
-.digital-phone-img {
-  width: min(260px, 75%);
-  height: auto;
-  object-fit: contain;
-  display: block;
-  /* subtle drop shadow to make phones pop on light bg */
-  filter: drop-shadow(0 20px 40px rgba(0, 13, 18, 0.12));
 }
 
 /* ======================================
@@ -298,7 +299,7 @@
   color: #e9f4f9;
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: clamp(26px, 3.2vw, 46px);
+  font-size: clamp(24px, 3vw, 44px);
   line-height: 120%;
   letter-spacing: -0.01em;
 }
@@ -374,41 +375,25 @@
 
 /* ===== RESPONSIVE ===== */
 
-/* Tablet — collapse to single column */
+/* Large tablet — collapse outer layout but keep inner card rows */
 @media (max-width: 1024px) {
   .digital-layout {
     grid-template-columns: 1fr;
-    gap: 60px;
+    gap: 60px 0;
   }
 
-  .digital-right {
-    /* On tablet, phones go horizontal in a row */
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 32px;
-    align-items: flex-start;
+  .digital-left {
+    position: static;
   }
 
-  .digital-phone-block {
-    min-height: unset;
-    width: auto;
-    padding: 0;
-    border-bottom: none !important;
+  .digital-description {
+    max-width: 100%;
   }
 
-  .digital-phone-img {
-    width: min(180px, 28vw);
-  }
-
-  .digital-text-block {
-    min-height: unset;
-    padding-right: 0;
-    padding-bottom: 40px;
-  }
-
-  .digital-text-block:last-child {
-    padding-bottom: 0;
+  .digital-card-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 24px;
+    padding: 48px 0;
   }
 
   .digital-bottom-cta {
@@ -427,7 +412,7 @@
   }
 }
 
-/* Mobile */
+/* Tablet — card rows collapse: phone on top, text below */
 @media (max-width: 768px) {
   .digital-section {
     padding: 60px 0 80px;
@@ -437,16 +422,28 @@
     padding: 0 1.25rem;
   }
 
-  .digital-header {
-    padding-bottom: 48px;
+  .digital-card-row {
+    grid-template-columns: 1fr;
+    gap: 28px 0;
+    padding: 40px 0;
+    justify-items: center;
   }
 
-  .digital-right {
-    gap: 20px;
+  /* Reset alternating order on mobile — always phone on top */
+  .digital-card-row:nth-child(even) .digital-card-phone {
+    order: 0;
+  }
+
+  .digital-card-row:nth-child(even) .digital-card-text {
+    order: 1;
   }
 
   .digital-phone-img {
-    width: min(160px, 40vw);
+    width: min(200px, 55vw);
+  }
+
+  .digital-card-text {
+    width: 100%;
   }
 
   .digital-bottom-cta {
@@ -468,6 +465,7 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .digital-title {
     font-size: clamp(26px, 8vw, 36px);
@@ -478,12 +476,7 @@
     max-width: 260px;
   }
 
-  .digital-right {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .digital-phone-img {
-    width: min(220px, 65vw);
+    width: min(200px, 65vw);
   }
 }

@@ -30,6 +30,15 @@ export default function Hero() {
               CONTACT US
             </a>
           </div>
+
+          {/* TRUSTED BY — directly below the action buttons */}
+          <div className="hero__trusted">
+            <img
+              src={trustedRow}
+              alt="Trusted By"
+              className="hero__trusted-image"
+            />
+          </div>
         </div>
 
         {/* RIGHT VISUAL */}
@@ -62,15 +71,6 @@ export default function Hero() {
             />
           </div>
         </div>
-      </div>
-
-      {/* TRUSTED BY */}
-      <div className="hero__trusted">
-        <img
-          src={trustedRow}
-          alt="Trusted By"
-          className="hero__trusted-image"
-        />
       </div>
     </section>
   );

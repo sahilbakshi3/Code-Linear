@@ -66,13 +66,13 @@ export default function DigitalBanking() {
 
       <div className="digital-inner">
         <div className="digital-layout">
-          {/* ── LEFT COLUMN ── */}
+          {/* ── LEFT COLUMN — header/CTA only ── */}
           <div className="digital-left">
-            {/* Section header */}
             <div className="digital-header">
               <div className="digital-header-content">
                 <h2 className="digital-title">
-                  Digital banking out-of-the-box
+                  Digital banking
+                  <br /> out-of-the-box
                 </h2>
                 <p className="digital-description">
                   N7 helps your financial institution improve the client
@@ -84,11 +84,23 @@ export default function DigitalBanking() {
                 <img src={learnMoreIcon} alt="Learn More" />
               </a>
             </div>
+          </div>
 
-            {/* Text blocks — one per card, aligned with phones on right */}
-            <div className="digital-text-blocks">
-              {cards.map((card, i) => (
-                <div className="digital-text-block" key={i}>
+          {/* ── RIGHT COLUMN — stacked rows: phone | text ── */}
+          <div className="digital-right">
+            {cards.map((card, i) => (
+              <div className="digital-card-row" key={i}>
+                {/* Phone image — left half of right column */}
+                <div className="digital-card-phone">
+                  <img
+                    src={card.img}
+                    alt={card.alt}
+                    className="digital-phone-img"
+                  />
+                </div>
+
+                {/* Text content — right half of right column */}
+                <div className="digital-card-text">
                   <h3 className="digital-card-title">{card.title}</h3>
                   <p className="digital-card-description">{card.description}</p>
                   <div className="digital-card-points">
@@ -104,19 +116,6 @@ export default function DigitalBanking() {
                     ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* ── RIGHT COLUMN — phones ── */}
-          <div className="digital-right">
-            {cards.map((card, i) => (
-              <div className="digital-phone-block" key={i}>
-                <img
-                  src={card.img}
-                  alt={card.alt}
-                  className="digital-phone-img"
-                />
               </div>
             ))}
           </div>

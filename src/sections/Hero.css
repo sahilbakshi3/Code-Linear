@@ -27,6 +27,9 @@
   max-width: 600px;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 /* HERO TITLE */
@@ -57,6 +60,7 @@
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  margin-bottom: 2.5rem;
 }
 
 .hero__actions .btn {
@@ -95,6 +99,20 @@
 
 .hero__actions .btn-outline:hover {
   background: rgba(233, 244, 249, 0.08);
+}
+
+/* TRUSTED BY — sits directly below buttons in left content */
+.hero__trusted {
+  width: 100%;
+  max-width: 480px;
+}
+
+.hero__trusted-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 0.85;
 }
 
 /* RIGHT VISUAL */
@@ -186,23 +204,6 @@
   display: block;
 }
 
-/* TRUSTED BY */
-.hero__trusted {
-  width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 0 2rem 80px;
-  box-sizing: border-box;
-}
-
-.hero__trusted-image {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  object-fit: contain;
-  display: block;
-}
-
 /* ===== RESPONSIVE ===== */
 
 /* Large Tablet */
@@ -212,14 +213,12 @@
     align-items: center;
     text-align: center;
     padding-top: 140px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     gap: 3rem;
   }
 
   .hero__content {
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -228,15 +227,19 @@
     text-align: center;
   }
 
-  .hero__visual {
-    width: 440px;
-    height: 300px;
+  .hero__actions {
+    justify-content: center;
   }
 
   .hero__trusted {
-    padding: 0 2rem 60px;
+    max-width: 520px;
     display: flex;
     justify-content: center;
+  }
+
+  .hero__visual {
+    width: 440px;
+    height: 300px;
   }
 }
 
@@ -244,7 +247,7 @@
 @media (max-width: 768px) {
   .hero__inner {
     padding-top: 120px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
 
   .hero__title {
@@ -264,6 +267,10 @@
   .hero__actions .btn-outline {
     width: 180px;
     font-size: 11px;
+  }
+
+  .hero__trusted {
+    max-width: 420px;
   }
 
   .hero__visual {
@@ -319,6 +326,10 @@
     max-width: 320px;
   }
 
+  .hero__trusted {
+    max-width: 100%;
+  }
+
   .hero__visual {
     width: 100%;
     max-width: 320px;
@@ -349,9 +360,5 @@
     height: 80px;
     top: 115px;
     left: -5px;
-  }
-
-  .hero__trusted {
-    padding: 0 1.25rem 50px;
   }
 }

@@ -1,528 +1,489 @@
 /* DigitalBanking.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Chivo+Mono:wght@400&display=swap");
-
-/* SECTION */
-
 .digital-section {
   width: 100%;
-  height: 2647px;
-
   background: #e9f4f9;
-
   position: relative;
   overflow: hidden;
-
   isolation: isolate;
+  padding: 100px 0 120px;
 }
 
 /* GLOW */
-
 .digital-section::before {
   content: "";
-
   position: absolute;
-
-  width: 900px;
-  height: 900px;
-
+  width: 600px;
+  height: 600px;
   border-radius: 50%;
-
   background: rgba(0, 180, 253, 0.06);
-
   filter: blur(120px);
-
-  left: -500px;
-  top: 500px;
-
+  left: -300px;
+  top: 400px;
   z-index: 0;
-}
-
-/* N7 BG */
-
-.digital-bg-n7 {
-  position: absolute;
-
-  width: 744px;
-  height: 687px;
-
-  top: -66.74px;
-  left: 277px;
-
-  opacity: 0.5;
-
-  object-fit: contain;
-
-  z-index: 1;
-
   pointer-events: none;
 }
 
-/* CROSS BG */
+/* BACKGROUND IMAGES */
+.digital-bg-n7 {
+  position: absolute;
+  width: min(600px, 55%);
+  height: auto;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-20%);
+  opacity: 0.35;
+  object-fit: contain;
+  z-index: 1;
+  pointer-events: none;
+}
 
 .digital-bg-cross {
   position: absolute;
-
-  width: 1243.2488px;
-  height: 1245.2142px;
-
-  top: 418.17px;
-  left: -520px;
-
-  opacity: 0.45;
-
+  width: min(900px, 80%);
+  height: auto;
+  top: 300px;
+  left: -200px;
+  opacity: 0.28;
   object-fit: contain;
-
   z-index: 1;
-
   pointer-events: none;
 }
 
-/* LEFT HEADER */
-
-.digital-header {
-  position: absolute;
-
-  width: 438.9869px;
-  height: 308px;
-
-  top: 100px;
-  left: 81px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 16px;
-
+/* INNER CONTAINER */
+.digital-inner {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
   z-index: 3;
+  box-sizing: border-box;
 }
 
-/* HEADER CONTENT */
+/* ======================================
+   TWO-COLUMN LAYOUT
+   Left: header + text blocks
+   Right: phone images stacked
+====================================== */
+
+.digital-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 80px;
+  align-items: start;
+}
+
+/* LEFT COLUMN */
+.digital-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* HEADER — sits at top of left col */
+.digital-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 80px;
+}
 
 .digital-header-content {
   display: flex;
   flex-direction: column;
-
   gap: 16px;
 }
 
-/* TITLE */
-
 .digital-title {
-  width: 438.9869px;
-  height: 128px;
-
   margin: 0;
-
   color: #000d12;
-
-  opacity: 0.95;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 53px;
+  font-size: clamp(30px, 3.8vw, 53px);
   line-height: 120%;
   letter-spacing: -0.01em;
 }
 
-/* DESCRIPTION */
-
 .digital-description {
-  width: 379.0324px;
-  height: 42px;
-
   margin: 0;
-
   opacity: 0.7;
   color: #000d12;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 130%;
-  letter-spacing: 0;
+  line-height: 140%;
+  max-width: 380px;
 }
-
-/* BUTTON */
 
 .digital-btn {
   width: 210px;
   height: 49px;
-
   border: none;
   border-radius: 10px;
-
-  padding: 15px 51px;
-
   background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
-
   color: #ffffff;
-
   font-family: "Chivo Mono", monospace;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 130%;
-  letter-spacing: 0;
+  font-size: 14px;
   text-transform: uppercase;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-/* LEARN MORE */
+.digital-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.35);
+}
 
 .digital-learn-more {
-  width: 102.5688px;
-  height: 21px;
-
+  width: fit-content;
   display: flex;
   align-items: center;
 }
 
 .digital-learn-more img {
-  width: 100%;
-  height: 100%;
-
+  width: 110px;
+  height: auto;
   object-fit: contain;
 }
 
-/* RIGHT SIDE */
-
-.digital-cards {
-  position: absolute;
-
-  width: 651.7056px;
-  height: 1848.7001px;
-
-  top: 100px;
-  left: 622px;
-
+/* TEXT BLOCKS — left col, aligned with phones */
+.digital-text-blocks {
   display: flex;
   flex-direction: column;
-
-  gap: 110px;
-
-  z-index: 3;
+  gap: 0;
 }
 
-/* CARD */
-
-.digital-card {
-  width: 650.3118px;
-  height: 542.9px;
-
-  display: flex;
-  align-items: flex-start;
-
-  gap: 80px;
-}
-
-/* REVERSE */
-
-.digital-card-reverse {
-  width: 613.3118px;
-  height: 542.9px;
-
-  gap: 76px;
-}
-
-/* IMAGE */
-
-.digital-card-image {
-  width: 268.3118px;
-  height: 542.9px;
-
-  flex-shrink: 0;
-}
-
-.digital-card-image img {
-  width: 100%;
-  height: 100%;
-
-  object-fit: contain;
-
-  display: block;
-}
-
-/* CONTENT */
-
-.digital-card-content {
-  width: 268.3118px;
-  height: 542.9px;
-
+.digital-text-block {
   display: flex;
   flex-direction: column;
-
+  gap: 16px;
+  /* Each block height matches corresponding phone on right */
+  min-height: 440px;
   justify-content: center;
+  padding-right: 20px;
 }
 
-/* SECOND CONTENT */
-
-.digital-card-content-second {
-  width: 269px;
-  height: 321.8155px;
-
-  justify-content: flex-start;
-
-  gap: 43px;
+.digital-text-block:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 13, 18, 0.08);
 }
-
-/* TITLE */
 
 .digital-card-title {
-  margin: 0 0 24px 0;
-
+  margin: 0;
   color: #000d12;
-
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 140%;
 }
 
-/* DESCRIPTION */
-
 .digital-card-description {
-  width: 268.5061px;
-  height: 126px;
-
-  margin: 0 0 32px 0;
-
-  opacity: 0.7;
+  margin: 0;
+  opacity: 0.65;
   color: #000d12;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 130%;
+  font-size: 15px;
+  line-height: 155%;
 }
 
 /* POINTS */
-
 .digital-card-points {
-  width: 302px;
-  height: 128.8155px;
-
   display: flex;
   flex-direction: column;
-
   gap: 12px;
 }
 
-/* POINT */
-
 .digital-card-point {
-  width: 302px;
-  height: 31.4077px;
-
   display: flex;
   align-items: flex-start;
-
-  gap: 5px;
+  gap: 8px;
 }
 
-/* TICK */
-
 .digital-card-tick {
-  width: 13.14px;
-  height: 13.14px;
-
-  margin-top: 4px;
-
+  width: 14px;
+  height: 14px;
+  margin-top: 3px;
   flex-shrink: 0;
 }
 
-/* TEXT */
-
 .digital-card-point p {
-  width: 267.0199px;
-  height: 21px;
-
   margin: 0;
-
   opacity: 0.7;
   color: #000d12;
-
   font-family: "Archivo", sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 130%;
+  font-size: 15px;
+  line-height: 140%;
+}
+
+/* RIGHT COLUMN — phone images */
+.digital-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.digital-phone-block {
+  width: 100%;
+  min-height: 440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.digital-phone-block:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 13, 18, 0.08);
+}
+
+.digital-phone-img {
+  width: min(260px, 75%);
+  height: auto;
+  object-fit: contain;
+  display: block;
+  /* subtle drop shadow to make phones pop on light bg */
+  filter: drop-shadow(0 20px 40px rgba(0, 13, 18, 0.12));
 }
 
 /* ======================================
    BOTTOM CTA
 ====================================== */
-
 .digital-bottom-cta {
-  position: absolute;
-
-  width: 1279px;
-  height: 427px;
-
-  top: 2104.43px;
-  left: 81px;
-
-  border-radius: 27px;
-
+  width: 100%;
+  border-radius: 24px;
   background: linear-gradient(99.21deg, #031e2a -12.22%, #000d12 59.26%);
-
   overflow: hidden;
-
-  z-index: 3;
+  position: relative;
+  margin-top: 100px;
+  padding: 80px 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  isolation: isolate;
 }
-
-/* BG */
 
 .digital-bottom-bg {
   position: absolute;
-
-  width: 744px;
-  height: 687px;
-
-  top: -160.72px;
-  left: 620.56px;
-
-  opacity: 0.5;
-
+  width: min(600px, 60%);
+  height: auto;
+  top: -30%;
+  right: -5%;
+  opacity: 0.35;
   object-fit: contain;
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* CONTENT */
-
 .digital-bottom-content {
-  position: absolute;
-
-  top: 112px;
-  left: 65px;
-
-  width: 607.8349px;
-  height: 202px;
-
+  flex: 1;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
-
-  gap: 32px;
-
+  gap: 24px;
+  position: relative;
   z-index: 2;
 }
 
-/* TITLE */
-
 .digital-bottom-title {
-  width: 607.8349px;
-  height: 128px;
-
   margin: 0;
-
   color: #e9f4f9;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 53px;
+  font-size: clamp(26px, 3.2vw, 46px);
   line-height: 120%;
   letter-spacing: -0.01em;
 }
 
-/* DESC */
-
 .digital-bottom-description {
-  width: 462.9191px;
-  height: 42px;
-
   margin: 0;
-
   opacity: 0.7;
   color: #e9f4f9;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 130%;
+  line-height: 140%;
+  max-width: 440px;
 }
-
-/* ACTIONS */
 
 .digital-bottom-actions {
-  position: absolute;
-
-  width: 458px;
-  height: 49px;
-
-  top: 189px;
-  left: 757px;
-
   display: flex;
   align-items: center;
-
-  gap: 40px;
-
+  gap: 20px;
+  flex-shrink: 0;
+  position: relative;
   z-index: 2;
+  flex-wrap: wrap;
 }
-
-/* CONTACT */
 
 .digital-contact-btn {
-  width: 208px;
   height: 49px;
-
-  padding: 15px 59px;
-
+  padding: 0 36px;
   border-radius: 10px;
   border: 1px solid #e9f4f9;
-
   background: transparent;
-
   color: #e9f4f9;
-
   font-family: "Chivo Mono", monospace;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 130%;
-  letter-spacing: 0;
+  font-size: 13px;
   text-transform: uppercase;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  gap: 8px;
-
-  box-sizing: border-box;
-
-  cursor: pointer;
-
   white-space: nowrap;
-
-  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* DEMO */
+.digital-contact-btn:hover {
+  background: rgba(233, 244, 249, 0.08);
+  transform: translateY(-2px);
+}
 
 .digital-demo-btn {
-  width: 210px;
   height: 49px;
-
+  padding: 0 36px;
   border: none;
   border-radius: 10px;
-
-  padding: 15px 51px;
-
   background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
-
   color: #ffffff;
-
   font-family: "Chivo Mono", monospace;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 130%;
+  font-size: 13px;
   text-transform: uppercase;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
+  white-space: nowrap;
   cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.digital-demo-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.35);
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet — collapse to single column */
+@media (max-width: 1024px) {
+  .digital-layout {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .digital-right {
+    /* On tablet, phones go horizontal in a row */
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .digital-phone-block {
+    min-height: unset;
+    width: auto;
+    padding: 0;
+    border-bottom: none !important;
+  }
+
+  .digital-phone-img {
+    width: min(180px, 28vw);
+  }
+
+  .digital-text-block {
+    min-height: unset;
+    padding-right: 0;
+    padding-bottom: 40px;
+  }
+
+  .digital-text-block:last-child {
+    padding-bottom: 0;
+  }
+
+  .digital-bottom-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .digital-bottom-content {
+    max-width: 100%;
+  }
+
+  .digital-bottom-description {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .digital-section {
+    padding: 60px 0 80px;
+  }
+
+  .digital-inner {
+    padding: 0 1.25rem;
+  }
+
+  .digital-header {
+    padding-bottom: 48px;
+  }
+
+  .digital-right {
+    gap: 20px;
+  }
+
+  .digital-phone-img {
+    width: min(160px, 40vw);
+  }
+
+  .digital-bottom-cta {
+    padding: 48px 24px;
+    border-radius: 18px;
+    margin-top: 60px;
+  }
+
+  .digital-bottom-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .digital-contact-btn,
+  .digital-demo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .digital-title {
+    font-size: clamp(26px, 8vw, 36px);
+  }
+
+  .digital-btn {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .digital-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .digital-phone-img {
+    width: min(220px, 65vw);
+  }
 }

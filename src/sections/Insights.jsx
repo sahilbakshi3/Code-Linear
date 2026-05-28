@@ -48,7 +48,6 @@ export default function Insights() {
             <h2 className="insights__heading">
               Get yourself up-to-speed on all the things happening in fintech
             </h2>
-
             <a href="/" className="insights__btn">
               INSIGHTS
             </a>
@@ -58,25 +57,19 @@ export default function Insights() {
           <div className="insights__right">
             {/* FEATURED CARD */}
             <div className="insights__featured">
-              {/* LOGO SECTION */}
               <div className="insights__img">
                 <LogoGrid />
               </div>
-
-              {/* CONTENT */}
               <div className="insights__featured-content">
                 <span className="insights__category">
                   {articles[0].category}
                 </span>
-
                 <h3 className="insights__title">{articles[0].title}</h3>
-
                 <div className="insights__meta">
                   <span>{articles[0].author}</span>
                   <span>·</span>
                   <span>{articles[0].date}</span>
                 </div>
-
                 <a href="/" className="insights__readmore">
                   <span>READ MORE</span>
                 </a>
@@ -88,19 +81,13 @@ export default function Insights() {
               {articles.slice(1).map((article, index) => (
                 <div key={index} className="insights__card">
                   <span className="insights__category">{article.category}</span>
-
                   <h3 className="insights__card-title">{article.title}</h3>
-
                   <div className="insights__meta">
                     <span>{article.author}</span>
                     <span>·</span>
                     <span>{article.date}</span>
                   </div>
-
-                  <a
-                    href="/"
-                    className="insights__readmore insights__readmore--card"
-                  >
+                  <a href="/" className="insights__readmore">
                     <span>READ MORE</span>
                   </a>
                 </div>

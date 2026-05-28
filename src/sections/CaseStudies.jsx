@@ -3,10 +3,8 @@ import "./CaseStudies.css";
 
 import crossLogo from "../assets/cross_logo_thing.svg";
 import companyLogo from "../assets/logo.svg";
-
 import leftArrow from "../assets/left_arrow.svg";
 import rightArrow from "../assets/right_arrow.svg";
-
 import ellipse from "../assets/Ellipse.svg";
 import rectangle from "../assets/Rectangle.svg";
 import viewAll from "../assets/view_all.svg";
@@ -45,27 +43,21 @@ export default function CaseStudies() {
   return (
     <section className="cs">
       <div className="container">
-        {/* TITLE */}
         <h2 className="cs__heading">Our Case Studies</h2>
 
-        {/* SLIDER WRAPPER */}
         <div className="cs__slider-wrapper">
           {/* FEATURED CARD */}
           <div className="cs__featured">
-            {/* LEFT SIDE */}
             <div className="cs__featured-img">
               <LogoGrid />
             </div>
 
-            {/* RIGHT SIDE */}
             <div className="cs__featured-content">
               <div className="cs__content-top">
                 <span className="cs__category">
                   {caseStudies[active].category}
                 </span>
-
                 <h3 className="cs__title">{caseStudies[active].title}</h3>
-
                 <img
                   src={companyLogo}
                   alt="company logo"
@@ -73,7 +65,6 @@ export default function CaseStudies() {
                 />
               </div>
 
-              {/* BUTTON */}
               <a href="/" className="cs__readmore">
                 <span>READ MORE</span>
               </a>
@@ -82,9 +73,7 @@ export default function CaseStudies() {
 
           {/* NAVIGATION */}
           <div className="cs__nav">
-            {/* CENTER NAVIGATION */}
             <div className="cs__navigation">
-              {/* PREVIOUS */}
               <button
                 className="cs__arrow-btn"
                 onClick={() =>
@@ -100,7 +89,6 @@ export default function CaseStudies() {
                 />
               </button>
 
-              {/* PROGRESS */}
               <div className="cs__progress">
                 {caseStudies.map((_, index) =>
                   active === index ? (
@@ -121,7 +109,6 @@ export default function CaseStudies() {
                 )}
               </div>
 
-              {/* NEXT */}
               <button
                 className="cs__arrow-btn"
                 onClick={() =>
@@ -134,7 +121,6 @@ export default function CaseStudies() {
               </button>
             </div>
 
-            {/* VIEW ALL */}
             <a href="/" className="cs__viewall">
               <img src={viewAll} alt="view all" className="cs__viewall-img" />
             </a>

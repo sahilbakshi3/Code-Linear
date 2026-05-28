@@ -1,289 +1,183 @@
 /* PaperlessSection.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Chivo+Mono:wght@400&display=swap");
-
 .paperless-section {
   width: 100%;
-  height: 681px;
-
   background: #000d12;
-
-  position: relative;
+  padding: 80px 0;
   overflow: hidden;
 }
 
 /* MAIN CARD */
-
 .paperless-card {
-  position: absolute;
-
-  width: 1279px;
-  height: 427px;
-
-  top: 127px;
-  left: 81px;
-
-  border-radius: 27px;
-
+  width: calc(100% - 4rem);
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 24px;
   background: linear-gradient(99.21deg, #031e2a -12.22%, #000d12 59.26%);
-
   overflow: hidden;
-
   isolation: isolate;
+  position: relative;
+  padding: 80px 60px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
 }
 
 /* BACKGROUND SVG */
-
 .paperless-bg {
   position: absolute;
-
-  width: 1141px;
-  height: 687px;
-
-  top: -160.72px;
-  left: 223.56px;
-
-  opacity: 0.5;
-
+  width: min(900px, 80%);
+  height: auto;
+  top: -50%;
+  right: -10%;
+  opacity: 0.4;
   object-fit: contain;
-
   pointer-events: none;
   user-select: none;
-
   z-index: 0;
 }
 
 /* LEFT CONTENT */
-
 .paperless-content {
-  position: absolute;
-
-  width: 607.8349px;
-  height: 202px;
-
-  top: 112.28px;
-  left: 65px;
-
+  flex: 1;
+  max-width: 560px;
+  position: relative;
   z-index: 2;
 }
 
 .paperless-text-wrapper {
   display: flex;
   flex-direction: column;
-
-  gap: 32px;
+  gap: 24px;
 }
 
-/* TITLE */
-
 .paperless-title {
-  width: 607.8349px;
-  height: 128px;
-
   margin: 0;
-
   color: #e9f4f9;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 53px;
+  font-size: clamp(28px, 3.5vw, 48px);
   line-height: 120%;
   letter-spacing: -0.01em;
 }
 
-/* DESCRIPTION */
-
 .paperless-description {
-  width: 462.9191px;
-  height: 42px;
-
   margin: 0;
-
   opacity: 0.8;
   color: #e9f4f9;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 130%;
-  letter-spacing: 0;
+  line-height: 140%;
+  max-width: 440px;
 }
 
 /* BUTTON GROUP */
-
 .paperless-actions {
-  position: absolute;
-
-  width: 458px;
-  height: 49px;
-
-  top: 189px;
-  left: 757px;
-
   display: flex;
   align-items: center;
-
-  gap: 40px;
-
+  gap: 20px;
+  flex-shrink: 0;
+  position: relative;
   z-index: 2;
+  flex-wrap: wrap;
 }
-
-/* COMMON BUTTON */
-
-.paperless-actions button {
-  height: 49px;
-
-  border-radius: 10px;
-
-  font-family: "Chivo Mono", monospace;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 130%;
-  letter-spacing: 0;
-  text-transform: uppercase;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-}
-
-.paperless-actions button:hover {
-  transform: translateY(-2px);
-}
-
-/* CONTACT BUTTON */
 
 .paperless-btn-outline {
-  width: 208px;
   height: 49px;
-
-  padding: 15px 59px;
-
+  padding: 0 36px;
   border: 1px solid #e9f4f9;
   border-radius: 10px;
-
   background: transparent;
-
   color: #e9f4f9;
-
   font-family: "Chivo Mono", monospace;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 130%;
-  letter-spacing: 0;
+  font-size: 13px;
   text-transform: uppercase;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   white-space: nowrap;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
 }
 
-/* REQUEST DEMO */
+.paperless-btn-outline:hover {
+  background: rgba(233, 244, 249, 0.08);
+  transform: translateY(-2px);
+}
 
 .paperless-btn-primary {
-  width: 210px;
-
-  padding: 15px 51px;
-
+  height: 49px;
+  padding: 0 36px;
   border: none;
-
+  border-radius: 10px;
   background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
-
   color: #ffffff;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 1440px) {
-  .paperless-card {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.paperless-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 122, 255, 0.35);
 }
 
-@media (max-width: 1320px) {
-  .paperless-section {
-    height: auto;
+/* ===== RESPONSIVE ===== */
 
-    padding: 80px 24px;
-  }
-
+/* Tablet */
+@media (max-width: 1024px) {
   .paperless-card {
-    position: relative;
-
-    width: 100%;
-    height: auto;
-
-    left: unset;
-    top: unset;
-
-    transform: unset;
-
-    padding: 60px 40px;
-
-    display: flex;
     flex-direction: column;
-
-    gap: 60px;
-  }
-
-  .paperless-content,
-  .paperless-actions {
-    position: relative;
-
-    top: unset;
-    left: unset;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 60px 40px;
   }
 
   .paperless-content {
-    width: 100%;
-    height: auto;
-  }
-
-  .paperless-title {
-    width: 100%;
-    height: auto;
-
-    font-size: 42px;
+    max-width: 100%;
   }
 
   .paperless-description {
-    width: 100%;
-    height: auto;
-  }
-
-  .paperless-actions {
-    width: 100%;
-
-    flex-wrap: wrap;
-  }
-
-  .paperless-bg {
-    left: 40%;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width: 640px) {
+  .paperless-section {
+    padding: 60px 0;
+  }
+
+  .paperless-card {
+    width: calc(100% - 2.5rem);
+    padding: 48px 24px;
+    border-radius: 18px;
+  }
+
   .paperless-title {
-    font-size: 34px;
+    font-size: clamp(26px, 7vw, 36px);
   }
 
   .paperless-actions {
     flex-direction: column;
-    align-items: flex-start;
-
-    gap: 20px;
+    align-items: stretch;
+    width: 100%;
   }
 
   .paperless-btn-outline,
   .paperless-btn-primary {
     width: 100%;
-    max-width: 260px;
+    justify-content: center;
   }
 }

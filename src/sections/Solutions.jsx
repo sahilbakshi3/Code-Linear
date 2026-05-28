@@ -17,7 +17,7 @@ const solutions = [
     icon: digitalbanking,
     title: "Digital Banking N7",
     tag: null,
-    desc: "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients",
+    desc: "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients.",
   },
   {
     icon: openbanking,
@@ -29,28 +29,26 @@ const solutions = [
     icon: loanbanking,
     title: "Loan Origination System",
     tag: "NBFC",
-    desc: "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients",
+    desc: "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients.",
   },
   {
     icon: crosslogo,
     title: "Loan Management System",
     tag: "NBFC",
-    desc: "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients",
+    desc: "N7 brings full capabilities across strategy, human-centred design, operations, engineering and data science to create and deliver disruptive innovation. Our approach to building digital banks is specifically designed to help clients.",
   },
 ];
 
 export default function Solutions() {
   return (
-    <section className="solutions section">
+    <section className="solutions">
       <div className="container">
         <div className="solutions__layout">
           <div className="solutions__left">
             <h2 className="solutions__heading">
-              All of our solutions are
-              <br />
-              tailor-made to your needs
+              All of our solutions are tailor-made to your needs
             </h2>
-            <a href="#" className="btn btn-outline-dark solutions__cta">
+            <a href="#" className="solutions__cta">
               REQUEST DEMO
             </a>
           </div>
@@ -58,9 +56,7 @@ export default function Solutions() {
           <div className="solutions__grid">
             {solutions.map((item, i) => (
               <div key={i} className="solution-card">
-                {/* TOP */}
                 <div className="solution-card__top">
-                  {/* ICON */}
                   <div className="solution-card__icon">
                     <img
                       src={item.icon}
@@ -68,21 +64,16 @@ export default function Solutions() {
                       className="solution-card__icon-image"
                     />
                   </div>
-
-                  {/* TAG */}
                   {item.tag && (
                     <span className="solution-card__tag">{item.tag}</span>
                   )}
                 </div>
 
-                {/* CONTENT */}
                 <div className="solution-card__content">
                   <h3 className="solution-card__title">{item.title}</h3>
-
                   <p className="solution-card__desc">{item.desc}</p>
                 </div>
 
-                {/* LEARN MORE */}
                 <a href="#" className="learn-more">
                   <img
                     src={learnMoreIcon}

@@ -1,153 +1,95 @@
-/* ===== HERO SECTION ===== */
+/* Hero.css */
 
 .hero {
   position: relative;
-
-  width: 1440px;
-  max-width: 100%;
-
-  height: 811px;
-
-  margin: 0 auto;
-
+  width: 100%;
+  min-height: 100vh;
   background: #000d12;
-
   overflow: hidden;
 }
 
-/* ===== MAIN LAYOUT ===== */
-
+/* MAIN LAYOUT */
 .hero__inner {
   width: 100%;
-  height: 100%;
-
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 160px 2rem 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  gap: 1rem;
-
-  padding-top: 140px;
-  padding-bottom: 80px;
+  gap: 3rem;
+  box-sizing: border-box;
 }
 
-/* ===== LEFT CONTENT ===== */
-
+/* LEFT CONTENT */
 .hero__content {
-  width: 608px;
-
-  flex-shrink: 0;
-
+  flex: 1;
+  max-width: 600px;
   position: relative;
   z-index: 2;
 }
 
-/* ===== HERO TITLE ===== */
-
+/* HERO TITLE */
 .hero__title {
-  width: 607px;
-  max-width: 100%;
-
   font-family: "Archivo", sans-serif;
-
-  font-size: 67px;
+  font-size: clamp(38px, 5vw, 67px);
   font-weight: 500;
   line-height: 120%;
-
   letter-spacing: -0.01em;
-
   color: #e9f4f9;
-
   margin-bottom: 1.25rem;
 }
 
-/* ===== HERO SUBTITLE ===== */
-
+/* HERO SUBTITLE */
 .hero__subtitle {
-  max-width: 520px;
-
   font-family: "Archivo", sans-serif;
-
   font-size: 16px;
   font-weight: 400;
-  line-height: 130%;
-
-  letter-spacing: 0;
-
+  line-height: 140%;
   color: #a8b3c7;
-
   margin-bottom: 2.5rem;
+  max-width: 480px;
 }
 
-/* ===== BUTTONS WRAPPER ===== */
-
+/* BUTTONS */
 .hero__actions {
-  width: 438px;
-  height: 49px;
-
   display: flex;
   align-items: center;
-
-  gap: 20px;
+  gap: 16px;
+  flex-wrap: wrap;
 }
-
-/* ===== SHARED BUTTON STYLES ===== */
 
 .hero__actions .btn {
   height: 49px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 10px;
-
   font-family: "Chivo Mono", monospace;
-
   font-size: 12px;
   font-weight: 400;
-  line-height: 130%;
-
-  letter-spacing: 0;
-
   text-transform: uppercase;
-
   transition: all 0.25s ease;
-
-  flex-shrink: 0;
 }
-
-/* ===== REQUEST DEMO BUTTON ===== */
 
 .hero__actions .btn-primary {
   width: 210px;
-
   padding: 15px 51px;
-
   background: linear-gradient(106.53deg, #00b4fd -5.68%, #003ace 86.98%);
-
   border: none;
-
   color: #e9f4f9;
 }
 
 .hero__actions .btn-primary:hover {
   transform: translateY(-1px);
-
   box-shadow: 0 10px 30px rgba(0, 122, 255, 0.35);
 }
 
-/* ===== CONTACT US BUTTON ===== */
-
 .hero__actions .btn-outline {
-  width: 208px;
-
-  padding: 15px 59px;
-
+  width: 200px;
+  padding: 15px 40px;
   border: 1px solid #e9f4f9;
-
   background: transparent;
-
   color: #e9f4f9;
 }
 
@@ -155,243 +97,261 @@
   background: rgba(233, 244, 249, 0.08);
 }
 
-/* ===== RIGHT VISUAL ===== */
-
+/* RIGHT VISUAL */
 .hero__visual {
   position: relative;
-
-  width: 562px;
-  height: 301px;
-
+  width: 500px;
+  height: 340px;
   flex-shrink: 0;
-
-  margin-right: 40px;
 }
 
-/* ===== BLUE GLOW ===== */
-
+/* BLUE GLOW */
 .hero__image-glow {
   position: absolute;
-
-  width: 398.87px;
-  height: 398.87px;
-
-  top: -50px;
-  left: 120px;
-
+  width: 380px;
+  height: 380px;
+  top: -40px;
+  left: 80px;
   opacity: 0.5;
-
   background: linear-gradient(103.43deg, #00b4fd -1.02%, #003ace 83.53%);
-
   filter: blur(100px);
-
   border-radius: 50%;
-
   z-index: 0;
 }
 
-/* ===== LADY IMAGE ===== */
-
+/* LADY IMAGE */
 .hero__lady-wrap {
   position: absolute;
-
-  width: 362.64px;
-  height: 300.71px;
-
-  top: 0.25px;
-  left: 87.13px;
-
-  border-radius: 31px;
-
+  width: 340px;
+  height: 290px;
+  top: 0;
+  left: 60px;
+  border-radius: 28px;
   overflow: hidden;
-
   z-index: 2;
 }
 
 .hero__lady-image {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
-/* ===== FLOATING CARDS ===== */
-
+/* FLOATING CARDS */
 .hero__floating-card {
   position: absolute;
-
   border-radius: 12px;
-
   overflow: hidden;
-
   z-index: 3;
 }
 
-/* ===== TOP RIGHT CARD ===== */
-
 .hero__floating-card--top {
-  width: 208px;
-  height: 177px;
-
-  top: 23px;
-  left: 353px;
-
-  border-radius: 12px;
-
+  width: 190px;
+  height: 160px;
+  top: 16px;
+  left: 315px;
   background: rgba(255, 255, 255, 0.4);
-
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-
-  box-shadow: 0px 0px 27.57px 8.92px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 27px 8px rgba(0, 0, 0, 0.25);
 }
-
-/* ===== INNER BALANCE CARD ===== */
 
 .hero__floating-card-inner {
   position: absolute;
-
-  width: 199px;
-  height: 168px;
-
-  top: 4.5px;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  top: 5px;
   left: 5px;
-
-  border-radius: 11px;
-
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.7);
-
   overflow: hidden;
 }
 
-/* ===== BOTTOM LEFT CARD ===== */
-
 .hero__floating-card--bottom {
-  width: 254px;
-  height: 117px;
-
-  top: 150px;
-  left: -28px;
-
-  border-radius: 12px;
-
+  width: 230px;
+  height: 105px;
+  top: 155px;
+  left: -10px;
   background: rgba(255, 255, 255, 0.4);
-
-  backdrop-filter: blur(16.19px);
-  -webkit-backdrop-filter: blur(16.19px);
-
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.18);
 }
-
-/* ===== SVG IMAGES ===== */
 
 .hero__floating-image {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
-/* ===== TRUSTED BY ===== */
-
+/* TRUSTED BY */
 .hero__trusted {
-  position: absolute;
-
-  width: 621.36px;
-  height: 55.4px;
-
-  left: 80px;
-  top: 655px;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  z-index: 5;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 2rem 80px;
+  box-sizing: border-box;
 }
 
 .hero__trusted-image {
   width: 100%;
-  height: 100%;
-
+  max-width: 600px;
+  height: auto;
   object-fit: contain;
-
   display: block;
 }
 
 /* ===== RESPONSIVE ===== */
 
-@media (max-width: 1024px) {
+/* Large Tablet */
+@media (max-width: 1100px) {
   .hero__inner {
     flex-direction: column;
-
-    justify-content: center;
-
-    gap: 4rem;
-  }
-
-  .hero {
-    height: auto;
-
-    padding-bottom: 120px;
-  }
-
-  .hero__visual {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-  }
-
-  .hero__inner {
-    padding-top: 120px;
+    align-items: center;
+    text-align: center;
+    padding-top: 140px;
+    padding-bottom: 60px;
+    gap: 3rem;
   }
 
   .hero__content {
-    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
+  .hero__subtitle {
+    max-width: 540px;
     text-align: center;
   }
 
-  .hero__title {
-    width: 100%;
+  .hero__visual {
+    width: 440px;
+    height: 300px;
+  }
 
-    font-size: 48px;
+  .hero__trusted {
+    padding: 0 2rem 60px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero__inner {
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+
+  .hero__title {
+    font-size: clamp(32px, 8vw, 48px);
+  }
+
+  .hero__subtitle {
+    font-size: 15px;
   }
 
   .hero__actions {
-    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
 
+  .hero__actions .btn-primary,
+  .hero__actions .btn-outline {
+    width: 180px;
+    font-size: 11px;
+  }
+
+  .hero__visual {
+    width: 360px;
+    height: 250px;
+    transform-origin: center top;
+  }
+
+  .hero__lady-wrap {
+    width: 280px;
+    height: 240px;
+    left: 40px;
+  }
+
+  .hero__image-glow {
+    width: 300px;
+    height: 300px;
+    left: 40px;
+  }
+
+  .hero__floating-card--top {
+    width: 150px;
+    height: 128px;
+    left: 250px;
+  }
+
+  .hero__floating-card--bottom {
+    width: 190px;
+    height: 88px;
+    top: 130px;
+    left: -10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero__inner {
+    padding: 110px 1.25rem 30px;
+  }
+
+  .hero__title {
+    font-size: clamp(28px, 9vw, 40px);
+  }
+
+  .hero__actions {
     flex-direction: column;
-
-    height: auto;
+    width: 100%;
   }
 
   .hero__actions .btn-primary,
   .hero__actions .btn-outline {
     width: 100%;
+    max-width: 320px;
   }
 
   .hero__visual {
-    transform: scale(0.8);
+    width: 100%;
+    max-width: 320px;
+    height: 220px;
+  }
+
+  .hero__lady-wrap {
+    width: 240px;
+    height: 200px;
+    left: 30px;
+  }
+
+  .hero__image-glow {
+    width: 260px;
+    height: 260px;
+    left: 20px;
+    top: -30px;
+  }
+
+  .hero__floating-card--top {
+    width: 130px;
+    height: 110px;
+    left: 210px;
+  }
+
+  .hero__floating-card--bottom {
+    width: 170px;
+    height: 80px;
+    top: 115px;
+    left: -5px;
   }
 
   .hero__trusted {
-    flex-direction: column;
-
-    gap: 20px;
-  }
-
-  .hero__trusted-logos {
-    flex-wrap: wrap;
-
-    justify-content: center;
+    padding: 0 1.25rem 50px;
   }
 }

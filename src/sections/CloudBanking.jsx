@@ -1,5 +1,3 @@
-// CloudBanking.jsx
-
 import "./CloudBanking.css";
 import analyticsMac from "../assets/analytics_mac_2.svg";
 import learnMoreIcon from "../assets/Learn_more.svg";
@@ -8,7 +6,6 @@ import cb7 from "../assets/CB7.svg";
 export default function CloudBanking() {
   return (
     <section className="analytics-section">
-      {/* BACKGROUND CB7 */}
       <img src={cb7} alt="CB7 Background" className="analytics-bg-text" />
 
       <div className="analytics-container">
@@ -19,7 +16,6 @@ export default function CloudBanking() {
               <h2 className="analytics-title">
                 A complete cloud-based core banking.
               </h2>
-
               <p className="analytics-description">
                 Faster time to market with our cloud-based core banking services
               </p>

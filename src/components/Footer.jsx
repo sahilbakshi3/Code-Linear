@@ -39,22 +39,17 @@ export default function Footer() {
         <div className="footer__right">
           {/* COLUMN 1 */}
           <div className="footer__column">
-            {/* TEXT AREA */}
             <div className="footer__text-area">
               <h3 className="footer__title">London</h3>
-
               <p className="footer__content">
                 Linktia Infosystems Ltd – CB7, 26 Main Road Sundridge, TN14 6EP,
                 England, United Kingdom.
               </p>
             </div>
-
-            {/* TABLE AREA */}
             <div className="footer__table">
               {solutions.map((item) => (
                 <a href="/" key={item} className="footer__row">
                   <span>{item}</span>
-
                   <img src={rightArrow} alt="arrow" className="footer__arrow" />
                 </a>
               ))}
@@ -63,22 +58,17 @@ export default function Footer() {
 
           {/* COLUMN 2 */}
           <div className="footer__column">
-            {/* TEXT AREA */}
             <div className="footer__text-area">
               <h3 className="footer__title">Dubai</h3>
-
               <p className="footer__content">
                 Linktia Infosystems Ltd – CB7, Jumeirah Business Center 5
                 Cluster W, Jumeirah Lakes Towers, Dubai, United Arab Emirates
               </p>
             </div>
-
-            {/* TABLE AREA */}
             <div className="footer__table">
               {companyLinks.map((item) => (
                 <a href="/" key={item} className="footer__row">
                   <span>{item}</span>
-
                   <img src={rightArrow} alt="arrow" className="footer__arrow" />
                 </a>
               ))}
@@ -87,22 +77,17 @@ export default function Footer() {
 
           {/* COLUMN 3 */}
           <div className="footer__column">
-            {/* TEXT AREA */}
             <div className="footer__text-area">
-              <h3 className="footer__title">London</h3>
-
+              <h3 className="footer__title">India</h3>
               <p className="footer__content">
                 Linktia Infosystems Ltd – CB7, Nirmal, Anand Nagar, Suncity
                 Road, Pune, Maharashtra, 411041, India
               </p>
             </div>
-
-            {/* TABLE AREA */}
             <div className="footer__table">
               {socials.map((item) => (
                 <a href="/" key={item} className="footer__row">
                   <span>{item}</span>
-
                   <img src={rightArrow} alt="arrow" className="footer__arrow" />
                 </a>
               ))}

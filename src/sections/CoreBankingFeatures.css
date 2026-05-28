@@ -1,98 +1,66 @@
 /* CoreBankingFeatures.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&display=swap");
-
 .features-section {
   width: 100%;
-  height: 681px;
-
   background: #000d12;
-
-  position: relative;
+  padding: 80px 0;
   overflow: hidden;
 }
 
 .features-container {
-  width: 1440px;
-  height: 100%;
-
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
-
-  position: relative;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  box-sizing: border-box;
 }
 
 /* LEFT IMAGE */
-
 .features-image-wrapper {
-  position: absolute;
-
-  top: 110px;
-  left: -159px;
+  flex-shrink: 0;
+  width: min(540px, 48%);
 }
 
 .features-image {
-  width: 651.6661px;
-  height: 461.4216px;
-
+  width: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
 }
 
 /* RIGHT CONTENT */
-
 .features-content {
-  position: absolute;
-
-  width: 590px;
-  height: 350.4077px;
-
-  top: 168.68px;
-  left: 770px;
-
+  flex: 1;
+  max-width: 560px;
   display: flex;
   flex-direction: column;
-
-  gap: 34px;
+  gap: 28px;
 }
 
 /* TITLE */
-
-.features-title-wrapper {
-  width: 495.3026px;
-  height: 70px;
-}
-
 .features-title {
   margin: 0;
-
   color: #e9f4f9;
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
-  font-size: 27px;
-  line-height: 130%;
-  letter-spacing: 0;
+  font-size: clamp(20px, 2.2vw, 27px);
+  line-height: 140%;
 }
 
 /* CONTENT AREA */
-
 .features-list-wrapper {
-  width: 590px;
-  height: 246.4077px;
-
   display: flex;
   flex-direction: column;
-
   gap: 14px;
 }
 
-/* SUBTITLE */
-
 .features-subtitle {
   margin: 0;
-
   color: #e9f4f9;
-
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 14px;
@@ -100,110 +68,76 @@
 }
 
 /* GRID */
-
 .features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
-  column-gap: 34px;
+  column-gap: 28px;
+  row-gap: 0;
 }
 
 /* COLUMN */
-
 .features-column {
   display: flex;
   flex-direction: column;
-
   gap: 14px;
 }
 
 /* FEATURE ITEM */
-
 .feature-item {
   display: flex;
   align-items: flex-start;
-
   gap: 10px;
 }
 
 .feature-tick {
-  width: 29.98px;
-  height: 31.41px;
-
+  width: 28px;
+  height: 28px;
   object-fit: contain;
-
   flex-shrink: 0;
-
-  margin-top: -2px;
+  margin-top: -1px;
 }
 
 .feature-item p {
   margin: 0;
-
   color: rgba(233, 244, 249, 0.8);
-
   font-family: "Archivo", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  line-height: 150%;
-  letter-spacing: 0;
+  line-height: 160%;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 
-@media (max-width: 1440px) {
+/* Tablet */
+@media (max-width: 1024px) {
   .features-container {
-    width: 100%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .features-section {
-    height: auto;
-
-    padding: 80px 24px;
-  }
-
-  .features-container {
-    display: flex;
     flex-direction: column;
-
-    gap: 60px;
+    align-items: flex-start;
+    gap: 48px;
   }
 
-  .features-image-wrapper,
-  .features-content {
-    position: relative;
-
-    top: unset;
-    left: unset;
-  }
-
-  .features-image {
+  .features-image-wrapper {
     width: 100%;
-    height: auto;
+    max-width: 560px;
+    align-self: center;
   }
 
   .features-content {
-    width: 100%;
-    height: auto;
-  }
-
-  .features-title-wrapper,
-  .features-title,
-  .features-list-wrapper {
-    width: 100%;
-    height: auto;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile */
+@media (max-width: 640px) {
+  .features-section {
+    padding: 60px 0;
+  }
+
   .features-grid {
     grid-template-columns: 1fr;
-    row-gap: 20px;
   }
 
-  .features-title {
-    font-size: 22px;
+  .features-container {
+    padding: 0 1.25rem;
   }
 }

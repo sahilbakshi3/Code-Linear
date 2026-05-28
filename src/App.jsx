@@ -7,7 +7,6 @@ import Solutions from "./sections/Solutions";
 import CloudBanking from "./sections/CloudBanking";
 import Marquee from "./components/Marquee";
 import DigitalBanking from "./sections/DigitalBanking";
-
 import Insights from "./sections/Insights";
 import CaseStudies from "./sections/CaseStudies";
 import Footer from "./components/Footer";

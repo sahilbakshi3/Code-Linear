@@ -2,37 +2,29 @@
 
 .marquee-section {
   width: 100%;
-  height: 116px;
-
+  height: 100px;
   background: #ffffff;
-
   overflow: hidden;
   position: relative;
-
   display: flex;
   align-items: center;
 }
 
 .marquee {
   width: 100%;
-
   overflow: hidden;
-
   position: relative;
 }
 
 .marquee-track {
   display: flex;
   align-items: center;
-
   width: max-content;
-
-  animation: marquee-scroll 20s linear infinite;
+  animation: marquee-scroll 22s linear infinite;
 }
 
 .marquee-item {
   flex-shrink: 0;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,46 +32,34 @@
 
 .marquee-image {
   width: auto;
-  height: 44px;
-
+  height: 40px;
   object-fit: contain;
-
   display: block;
-
-  margin-right: 70px;
+  margin-right: 60px;
 }
-
-/* INFINITE LOOP */
 
 @keyframes marquee-scroll {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
 }
 
-/* HOVER PAUSE */
-
 .marquee:hover .marquee-track {
   animation-play-state: paused;
 }
 
-/* RESPONSIVE */
-
 @media (max-width: 768px) {
   .marquee-section {
-    height: 90px;
+    height: 80px;
   }
-
   .marquee-image {
-    height: 34px;
+    height: 30px;
     margin-right: 40px;
   }
-
   .marquee-track {
-    animation-duration: 14s;
+    animation-duration: 16s;
   }
 }
